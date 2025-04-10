@@ -1,29 +1,26 @@
-<script setup>
-</script>
-
 <template>
-  <header>
-
-<h1>asd</h1>
-  </header>
+  <div id="app">
+    <Home />
+  </div>
 </template>
 
-<style scoped>
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+<script>
+import Home from "@/components/Home.vue";
+export default {
+  name: "App",
+  components: {
+    Home,
+  },
+};
+</script>
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+<style>
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-color: #53B690;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(17, 1fr);
 }
 </style>
